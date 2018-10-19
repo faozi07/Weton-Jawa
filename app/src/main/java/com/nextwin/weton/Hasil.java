@@ -16,8 +16,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import static com.nextwin.weton.MenuUtama.Bulan;
 import static com.nextwin.weton.MenuUtama.Hari;
@@ -47,7 +45,6 @@ public class Hasil extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static String watak,pekerjaan,rejeki,jodoh;
     public static boolean isWatak = true,isPekerjaan = true,isJodoh = true,isRejeki = true;
 
@@ -66,7 +63,6 @@ public class Hasil extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -75,44 +71,6 @@ public class Hasil extends AppCompatActivity {
             }
         });
         cariPasaran(Tahun,ltahun,Bulan,Hari);
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setPersistenceEnabled(true)
-                .build();
-        db.setFirestoreSettings(settings);
-        /*db.collection(namaHari).whereEqualTo("hari", pasaran1900[hasil])
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot querySnapshot,
-                                        @Nullable FirebaseFirestoreException e) {
-                        if (e != null) {
-                            Log.w("Errorrrss ", "Listen error", e);
-                            return;
-                        }
-                        if (querySnapshot != null || !querySnapshot.getDocuments().toString().equals("[]") || !querySnapshot.getDocumentChanges().isEmpty()) {
-                            Log.e("datasss ", String.valueOf("-"+querySnapshot.getDocuments()));
-                            String data = String.valueOf(querySnapshot.getDocuments().toString());
-                            if (data.equals("[]")) {
-                                hasilWeton();
-                            } else {
-                                for (DocumentChange change : querySnapshot.getDocumentChanges()) {
-                                    if (change.getType() == DocumentChange.Type.ADDED) {
-                                        watak = String.valueOf(change.getDocument().getData().get("watak"));
-                                        pekerjaan = String.valueOf(change.getDocument().getData().get("pekerjaan"));
-                                        rejeki = String.valueOf(change.getDocument().getData().get("rejeki"));
-                                        jodoh = String.valueOf(change.getDocument().getData().get("jodoh"));
-                                    }
-
-                                    String source = querySnapshot.getMetadata().isFromCache() ?
-                                            "local cache" : "server";
-                                    Log.d("Jaringan ", "Data fetched from " + source);
-                                }
-                            }
-                        } else {
-                            Log.e("kosong ", "data kosong");
-                        }
-
-                    }
-                });*/
         hasilWeton();
         setupTabIcons();
     }
