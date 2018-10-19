@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Weton.iml" filepath="$PROJECT_DIR$/Weton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Weton-Jawa.iml" filepath="$PROJECT_DIR$/Weton-Jawa.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

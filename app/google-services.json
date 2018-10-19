@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "632162891595",
-    "firebase_url": "https://artikel-41891.firebaseio.com",
-    "project_id": "artikel-41891",
-    "storage_bucket": "artikel-41891.appspot.com"
+    "project_number": "46113891027",
+    "firebase_url": "https://artikel-15181.firebaseio.com",
+    "project_id": "artikel-15181",
+    "storage_bucket": "artikel-15181.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:632162891595:android:cd3ede22a1de7c62",
+        "mobilesdk_app_id": "1:46113891027:android:20db061c26f07e73",
         "android_client_info": {
-          "package_name": "com.seven.weton"
+          "package_name": "com.nextwin.weton"
         }
       },
       "oauth_client": [
         {
-          "client_id": "632162891595-3lg30rqfta0aieccm1q6sj7pghubabni.apps.googleusercontent.com",
+          "client_id": "46113891027-uma2g897ot3o547dufrjd2fvg2csvu7t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAN2ywUsFQ3Pyy4x73Y7_DnJhxMqIRwzLg"
+          "current_key": "AIzaSyDgVFtUiUNo2EqLHjI31vpnx1Dka63Lh5c"
         }
       ],
       "services": {
