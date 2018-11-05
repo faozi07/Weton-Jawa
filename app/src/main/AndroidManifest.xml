@@ -15,7 +15,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1960309387431472~7926590397"/>
+            android:value="ca-app-pub-5730449577374867~8867052803"/>
         <activity
             android:name=".MenuUtama"
             android:theme="@style/Theme.AppCompat.NoActionBar">

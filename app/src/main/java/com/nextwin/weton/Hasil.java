@@ -169,7 +169,7 @@ public class Hasil extends AppCompatActivity {
         isPekerjaan = true;
         isRejeki = true;
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-1960309387431472/3282845791");
+        mInterstitialAd.setAdUnitId("ca-app-pub-5730449577374867/8008308841");
         mInterstitialAd.setAdListener(new AdListener() {
 
             @Override
