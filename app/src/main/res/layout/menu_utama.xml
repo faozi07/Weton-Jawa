@@ -52,7 +52,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:src="@drawable/wetonjawa2018"/>
+                    android:src="@drawable/wetonjawa"/>
 
                 <TextView
                     android:layout_width="match_parent"
