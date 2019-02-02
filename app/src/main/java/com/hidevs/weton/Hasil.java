@@ -54,6 +54,7 @@ public class Hasil extends AppCompatActivity {
         setContentView(R.layout.activity_hasil);
         FirebaseApp.initializeApp(this);
         deklarasi();
+        interstisial();
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -162,14 +163,10 @@ public class Hasil extends AppCompatActivity {
         teksNeptu.setText("Hari "+namaHari + " = "+hitHari+", Weton "+pasaran1900[hasil]+" = "+pasaran+", Neptu = "+neptu+" ("+hitHari+"+"+pasaran+")");
         teksWeton.setText(namaHari+"("+pasaran1900[hasil]+")");
     }
-    @Override
-    public void onBackPressed() {
-        isWatak = true;
-        isJodoh = true;
-        isPekerjaan = true;
-        isRejeki = true;
+
+    public void interstisial() {
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-5730449577374867/8008308841");
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.inters_admob));
         mInterstitialAd.setAdListener(new AdListener() {
 
             @Override
@@ -203,6 +200,15 @@ public class Hasil extends AppCompatActivity {
 
         AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest);
+    }
+
+    @Override
+    public void onBackPressed() {
+        isWatak = true;
+        isJodoh = true;
+        isPekerjaan = true;
+        isRejeki = true;
+        interstisial();
         finish();
     }
     
